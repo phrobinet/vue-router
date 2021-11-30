@@ -1,6 +1,7 @@
 const { description } = require('../../package')
+const { config } = require("vuepress-theme-hope")
 
-module.exports = {
+module.exports = config({
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
@@ -30,6 +31,7 @@ module.exports = {
     repo: '',
     editLinks: false,
     readingDir: [ 'api'],
+    hostname: "router.back-some.cc",
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
@@ -93,4 +95,4 @@ module.exports = {
     '@vuepress/plugin-medium-zoom',
     'reading-progress',
   ]
-}
+})

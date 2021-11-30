@@ -1,7 +1,6 @@
 ---
 home: true
 
-heroImage: /logo.png
 actionText: Commencez →
 actionLink: /installation.html
 
@@ -19,5 +18,5 @@ features:
   - title: 🌐 Encodage automatique
     details: Utilisez directement les caractères unicode (你好) dans votre code.
 
-footer: MIT Licensed | Copyright © 2014-present Evan You, Eduardo San Martin Morote
+footer: MIT Licensed | Copyright © 2021 Philippe Robinet
 ---
