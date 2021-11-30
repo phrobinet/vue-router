@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Champs méta de la route | Vuepress Docs Boilerplate</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.e7a61a40.css" as="style"><link rel="preload" href="/assets/js/app.1e9eeef5.js" as="script"><link rel="preload" href="/assets/js/2.ca4c494e.js" as="script"><link rel="preload" href="/assets/js/16.7c831878.js" as="script"><link rel="prefetch" href="/assets/js/10.511a6a5d.js"><link rel="prefetch" href="/assets/js/11.f7e4b865.js"><link rel="prefetch" href="/assets/js/12.768e1784.js"><link rel="prefetch" href="/assets/js/13.0e035732.js"><link rel="prefetch" href="/assets/js/14.422259f4.js"><link rel="prefetch" href="/assets/js/15.9d5dbd3b.js"><link rel="prefetch" href="/assets/js/17.9bf331d1.js"><link rel="prefetch" href="/assets/js/18.1a2529fe.js"><link rel="prefetch" href="/assets/js/19.5fe2732b.js"><link rel="prefetch" href="/assets/js/20.0ffcc546.js"><link rel="prefetch" href="/assets/js/21.ea337eb6.js"><link rel="prefetch" href="/assets/js/22.65c44035.js"><link rel="prefetch" href="/assets/js/23.2ea98c70.js"><link rel="prefetch" href="/assets/js/24.d5654b10.js"><link rel="prefetch" href="/assets/js/25.92e2af2d.js"><link rel="prefetch" href="/assets/js/26.9133f23e.js"><link rel="prefetch" href="/assets/js/27.9d8b13a1.js"><link rel="prefetch" href="/assets/js/28.6754ece2.js"><link rel="prefetch" href="/assets/js/29.866a2606.js"><link rel="prefetch" href="/assets/js/3.17b065ec.js"><link rel="prefetch" href="/assets/js/30.7609fce7.js"><link rel="prefetch" href="/assets/js/31.761dd616.js"><link rel="prefetch" href="/assets/js/32.1c2747f6.js"><link rel="prefetch" href="/assets/js/33.3ad12a7e.js"><link rel="prefetch" href="/assets/js/34.5ceb7d82.js"><link rel="prefetch" href="/assets/js/4.4bb3b9f9.js"><link rel="prefetch" href="/assets/js/5.01e99829.js"><link rel="prefetch" href="/assets/js/6.d5cea1fa.js"><link rel="prefetch" href="/assets/js/7.d9bfb9f3.js"><link rel="prefetch" href="/assets/js/8.7fdcafc1.js"><link rel="prefetch" href="/assets/js/9.343cd259.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e7a61a40.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Vuepress Docs Boilerplate</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  Guide
+</a></div><div class="nav-item"><a href="/api/" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/migration/" class="nav-link">
+  Migration
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  Guide
+</a></div><div class="nav-item"><a href="/api/" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/migration/" class="nav-link">
+  Migration
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/introduction.html" class="sidebar-link">Introduction</a></li><li><a href="/installation.html" class="sidebar-link">Installation</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Essentiels</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Avancé</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="champs-meta-de-la-route"><a href="#champs-meta-de-la-route" class="header-anchor">#</a> Champs méta de la route</h1> <p>Parfois, vous pouvez vouloir attacher des informations arbitraires aux routes comme les noms de transition, qui peut accéder à la route, etc. Ceci peut être réalisé grâce à la propriété <code>meta</code> qui accepte un objet de propriétés et peut être accédé à l'emplacement de l'itinéraire et aux gardes de navigation. Vous pouvez définir les propriétés <code>meta</code> comme ceci :</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> routes <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'/posts'</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> PostsLayout<span class="token punctuation">,</span>
+    children<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token string">'new'</span><span class="token punctuation">,</span>
+        component<span class="token operator">:</span> PostsNew<span class="token punctuation">,</span>
+        <span class="token comment">// seuls les utilisateurs authentifiés peuvent créer des messages</span>
+        meta<span class="token operator">:</span> <span class="token punctuation">{</span> requiresAuth<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token string">':id'</span><span class="token punctuation">,</span>
+        component<span class="token operator">:</span> PostsDetail<span class="token punctuation">,</span>
+        <span class="token comment">// tout le monde peut lire un message</span>
+        meta<span class="token operator">:</span> <span class="token punctuation">{</span> requiresAuth<span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre></div><p>Alors comment accéder à ce champ <code>meta</code> ?</p> <p>Premièrement, chaque objet route dans la configuration <code>routes</code> est appelé un <strong>enregistrement de route</strong>. Les enregistrements de routes peuvent être imbriqués. Par conséquent, lorsqu'une route est trouvée, elle peut potentiellement correspondre à plus d'un enregistrement de route.</p> <p>Par exemple, avec la configuration de route ci-dessus, l'URL <code>/posts/new</code> correspondra à la fois à l'enregistrement de route parent (<code>path : '/posts'</code>) et à l'enregistrement de route enfant (<code>path : 'new'</code>).</p> <p>Tous les enregistrements de route correspondant à une route sont exposés sur l'objet <code>$route</code> (et aussi les objets de route dans les gardes de navigation) comme le tableau <code>$route.matched</code>. Nous pourrions boucler à travers ce tableau pour vérifier tous les champs <code>meta</code>, mais Vue Router vous fournit également un <code>$route.meta</code> qui est une fusion non récursive de <strong>tous les champs <code>meta</code></strong> du parent à l'enfant. Cela signifie que vous pouvez simplement écrire</p> <div class="language-js extra-class"><pre class="language-js"><code>router<span class="token punctuation">.</span><span class="token function">beforeEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> <span class="token keyword">from</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// au lieu de devoir vérifier chaque enregistrement de route avec</span>
+  <span class="token comment">// to.matched.some(record =&gt; record.meta.requiresAuth)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>to<span class="token punctuation">.</span>meta<span class="token punctuation">.</span>requiresAuth <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>auth<span class="token punctuation">.</span><span class="token function">isLoggedIn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// cette route nécessite une authentification, vérifiez si vous êtes connecté.</span>
+    <span class="token comment">// si non, redirige vers la page de connexion.</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      path<span class="token operator">:</span> <span class="token string">'/login'</span><span class="token punctuation">,</span>
+      <span class="token comment">// sauvegarder l'endroit où nous nous trouvons pour y revenir plus tard.</span>
+      query<span class="token operator">:</span> <span class="token punctuation">{</span> redirect<span class="token operator">:</span> to<span class="token punctuation">.</span>fullPath <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="typescript"><a href="#typescript" class="header-anchor">#</a> TypeScript</h2> <p>Il est possible de saisir le champ méta en étendant l'interface <code>RouteMeta</code> :</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// typings.d.ts or router.ts</span>
+<span class="token keyword">import</span> <span class="token string">'vue-router'</span>
+
+<span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">'vue-router'</span> <span class="token punctuation">{</span>
+  <span class="token keyword">interface</span> <span class="token class-name">RouteMeta</span> <span class="token punctuation">{</span>
+    <span class="token comment">// est facultatif</span>
+    isAdmin<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span>
+    <span class="token comment">// doit être déclaré par chaque route</span>
+    requiresAuth<span class="token operator">:</span> <span class="token builtin">boolean</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.1e9eeef5.js" defer></script><script src="/assets/js/2.ca4c494e.js" defer></script><script src="/assets/js/16.7c831878.js" defer></script>
+  </body>
+</html>

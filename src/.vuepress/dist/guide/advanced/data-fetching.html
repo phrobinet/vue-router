@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Récupération de données | Vuepress Docs Boilerplate</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.e7a61a40.css" as="style"><link rel="preload" href="/assets/js/app.1e9eeef5.js" as="script"><link rel="preload" href="/assets/js/2.ca4c494e.js" as="script"><link rel="preload" href="/assets/js/12.768e1784.js" as="script"><link rel="prefetch" href="/assets/js/10.511a6a5d.js"><link rel="prefetch" href="/assets/js/11.f7e4b865.js"><link rel="prefetch" href="/assets/js/13.0e035732.js"><link rel="prefetch" href="/assets/js/14.422259f4.js"><link rel="prefetch" href="/assets/js/15.9d5dbd3b.js"><link rel="prefetch" href="/assets/js/16.7c831878.js"><link rel="prefetch" href="/assets/js/17.9bf331d1.js"><link rel="prefetch" href="/assets/js/18.1a2529fe.js"><link rel="prefetch" href="/assets/js/19.5fe2732b.js"><link rel="prefetch" href="/assets/js/20.0ffcc546.js"><link rel="prefetch" href="/assets/js/21.ea337eb6.js"><link rel="prefetch" href="/assets/js/22.65c44035.js"><link rel="prefetch" href="/assets/js/23.2ea98c70.js"><link rel="prefetch" href="/assets/js/24.d5654b10.js"><link rel="prefetch" href="/assets/js/25.92e2af2d.js"><link rel="prefetch" href="/assets/js/26.9133f23e.js"><link rel="prefetch" href="/assets/js/27.9d8b13a1.js"><link rel="prefetch" href="/assets/js/28.6754ece2.js"><link rel="prefetch" href="/assets/js/29.866a2606.js"><link rel="prefetch" href="/assets/js/3.17b065ec.js"><link rel="prefetch" href="/assets/js/30.7609fce7.js"><link rel="prefetch" href="/assets/js/31.761dd616.js"><link rel="prefetch" href="/assets/js/32.1c2747f6.js"><link rel="prefetch" href="/assets/js/33.3ad12a7e.js"><link rel="prefetch" href="/assets/js/34.5ceb7d82.js"><link rel="prefetch" href="/assets/js/4.4bb3b9f9.js"><link rel="prefetch" href="/assets/js/5.01e99829.js"><link rel="prefetch" href="/assets/js/6.d5cea1fa.js"><link rel="prefetch" href="/assets/js/7.d9bfb9f3.js"><link rel="prefetch" href="/assets/js/8.7fdcafc1.js"><link rel="prefetch" href="/assets/js/9.343cd259.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e7a61a40.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Vuepress Docs Boilerplate</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  Guide
+</a></div><div class="nav-item"><a href="/api/" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/migration/" class="nav-link">
+  Migration
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  Guide
+</a></div><div class="nav-item"><a href="/api/" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/migration/" class="nav-link">
+  Migration
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/introduction.html" class="sidebar-link">Introduction</a></li><li><a href="/installation.html" class="sidebar-link">Installation</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Essentiels</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Avancé</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="recuperation-de-donnees"><a href="#recuperation-de-donnees" class="header-anchor">#</a> Récupération de données</h1> <p>Parfois, vous avez besoin de récupérer des données du serveur lorsqu'une route est activée. Par exemple, avant de rendre le profil d'un utilisateur, vous devez récupérer les données de l'utilisateur depuis le serveur. Nous pouvons y parvenir de deux manières différentes :</p> <ul><li><p><strong>Récupération après la navigation</strong> : effectuez d'abord la navigation, puis récupérez les données dans le crochet de cycle de vie du composant entrant. Afficher un état de chargement pendant que les données sont récupérées.</p></li> <li><p><strong>Récupération avant la navigation</strong> : Récupérer les données avant la navigation dans la garde d'entrée de l'itinéraire, et effectuer la navigation après la récupération des données.</p></li></ul> <p>Techniquement, les deux choix sont valables - cela dépend en fin de compte de l'expérience utilisateur que vous souhaitez obtenir.</p> <h2 id="recuperation-apres-la-navigation"><a href="#recuperation-apres-la-navigation" class="header-anchor">#</a> Récupération après la navigation</h2> <p>En utilisant cette approche, nous naviguons et rendons le composant entrant immédiatement, et récupérons les données dans le hook <code>created</code> du composant. Cela nous donne la possibilité d'afficher un état de chargement pendant que les données sont récupérées sur le réseau, et nous pouvons également gérer le chargement différemment pour chaque vue.</p> <p>Supposons que nous ayons un composant <code>Post</code> qui a besoin de récupérer les données d'un post basé sur <code>$route.params.id</code> :</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>post<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>loading<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>loading<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Loading...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>error<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>error<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{{ error }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>post<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>content<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>{{ post.title }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>{{ post.body }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      loading<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      post<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+      error<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// regarder les paramètres de la route pour récupérer les données à nouveau</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$watch</span><span class="token punctuation">(</span>
+      <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>params<span class="token punctuation">,</span>
+      <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">fetchData</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token comment">// récupérer les données lorsque la vue est créée et que les données sont</span>
+      <span class="token comment">// déjà en cours d'observation</span>
+      <span class="token punctuation">{</span> immediate<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">fetchData</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>error <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>post <span class="token operator">=</span> <span class="token keyword">null</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>loading <span class="token operator">=</span> <span class="token boolean">true</span>
+      <span class="token comment">// remplacez `getPost` par votre utilitaire de récupération de données / wrapper API.</span>
+      <span class="token function">getPost</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>params<span class="token punctuation">.</span>id<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> post</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>loading <span class="token operator">=</span> <span class="token boolean">false</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>error <span class="token operator">=</span> err<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>post <span class="token operator">=</span> post
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="recuperation-avant-la-navigation"><a href="#recuperation-avant-la-navigation" class="header-anchor">#</a> Récupération avant la navigation</h2> <p>Avec cette approche, nous récupérons les données avant de naviguer vers la nouvelle route. Nous pouvons effectuer la récupération des données dans la garde <code>beforeRouteEnter</code> du composant entrant, et n'appeler <code>next</code> que lorsque la récupération est terminée :</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      post<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+      error<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">beforeRouteEnter</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> from<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">getPost</span><span class="token punctuation">(</span>to<span class="token punctuation">.</span>params<span class="token punctuation">.</span>id<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> post</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token function">next</span><span class="token punctuation">(</span><span class="token parameter">vm</span> <span class="token operator">=&gt;</span> vm<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span> post<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">// lorsque la route change et que ce composant est déjà rendu,</span>
+  <span class="token comment">// la logique sera légèrement différente.</span>
+  <span class="token keyword">async</span> <span class="token function">beforeRouteUpdate</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> <span class="token keyword">from</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>post <span class="token operator">=</span> <span class="token keyword">null</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>post <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">getPost</span><span class="token punctuation">(</span>to<span class="token punctuation">.</span>params<span class="token punctuation">.</span>id<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>error <span class="token operator">=</span> error<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>L'utilisateur restera sur la vue précédente pendant que la ressource est extraite pour la vue suivante. Il est donc recommandé d'afficher une barre de progression ou un autre type d'indicateur pendant la récupération des données. Si la récupération des données échoue, il est également nécessaire d'afficher un message d'avertissement global.</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.1e9eeef5.js" defer></script><script src="/assets/js/2.ca4c494e.js" defer></script><script src="/assets/js/12.768e1784.js" defer></script>
+  </body>
+</html>
